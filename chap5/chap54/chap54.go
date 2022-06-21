@@ -16,3 +16,12 @@ func Kai_no_kosuu(a, b, c float64) int {
 		return 0
 	}
 }
+
+//2次方程式ax^2+bx+c=0の係数a,b,c(全て実数)を与えられたら虚数解を持つかどうかを判定する
+func Kyosuukai(a, b, c float64) bool {
+	if Hanbetsushiki(a, b, c) < 0 {
+		return true
+	} else {
+		return false
+	}
+}

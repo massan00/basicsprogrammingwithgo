@@ -74,3 +74,42 @@ func TestKainokosuu(t *testing.T) {
 		})
 	}
 }
+
+func TestKyosuukai(t *testing.T) {
+	type args struct {
+		a float64
+		b float64
+		c float64
+	}
+
+	tests := []struct {
+		name string
+		args args
+		want bool
+	}{
+		{
+			name: "問題56 test1",
+			args: args{a: 2.0, b: 3.0, c: 4.0},
+			want: true,
+		},
+		{
+			name: "問題56 test2",
+			args: args{a: 2.0, b: -4.0, c: 2.0},
+			want: false,
+		},
+		{
+			name: "問題56 test3",
+			args: args{a: 1.0, b: 2.0, c: 4.0},
+			want: true,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := Kyosuukai(tt.args.a, tt.args.b, tt.args.c); got != tt.want {
+				t.Errorf("Kyosuukai() = %v, want= %v", got, tt.want)
+			}
+		})
+	}
+
+}
