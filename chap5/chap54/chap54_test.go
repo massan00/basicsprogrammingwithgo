@@ -126,22 +126,22 @@ func TestTakei(t *testing.T) {
 		want string
 	}{
 		{
-			name: "身長1.75 体重 66.5",
+			name: "問題5.7 身長1.75 体重 66.5",
 			args: args{m: 1.75, kg: 66.5},
 			want: "標準",
 		},
 		{
-			name: "身長1.85 体重 60",
+			name: "問題5.7 身長1.85 体重 60",
 			args: args{m: 1.85, kg: 60},
 			want: "やせ",
 		},
 		{
-			name: "身長1.65 体重 80",
+			name: "問題5.7 身長1.65 体重 80",
 			args: args{m: 1.65, kg: 80},
 			want: "肥満",
 		},
 		{
-			name: "身長1.55 体重 90",
+			name: "問題5.7 身長1.55 体重 90",
 			args: args{m: 1.55, kg: 90},
 			want: "高度肥満",
 		},
