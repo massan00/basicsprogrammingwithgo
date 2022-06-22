@@ -25,3 +25,25 @@ func Kyosuukai(a, b, c float64) bool {
 		return false
 	}
 }
+
+// bmi heightとweightを引数にとりbmi計算後数値を返す
+func bmi(height float64, weight float64) float64 {
+	b := weight / (height * height)
+
+	return b
+}
+
+//身長mと体重kgを引数にとり、数値によって肥満状態を判定して文字列を返す
+func Taikei(m float64, kg float64) string {
+	bmi := bmi(m, kg)
+	switch {
+	case bmi < 18.5:
+		return "やせ"
+	case bmi >= 18.5 && bmi < 25:
+		return "標準"
+	case bmi >= 25 && bmi < 30:
+		return "肥満"
+	default:
+		return "高度肥満"
+	}
+}
