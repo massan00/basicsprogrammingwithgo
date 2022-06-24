@@ -53,7 +53,9 @@ func (c *Coordinate) SymmetricX() Coordinate {
 // 1つの座標を引数にとって中点の座標を返す
 func (c *Coordinate) Midpoint(c2 Coordinate) Coordinate {
 	if c.x == c2.x && c.y == c2.y {
-		return *c
+		x := c.x
+		y := c.x
+		return Coordinate{x: x, y: y}
 	}
 
 	x := (c.x + c2.x) / 2
